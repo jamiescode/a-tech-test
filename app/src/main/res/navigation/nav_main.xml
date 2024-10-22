@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_main"
+    app:startDestination="@id/marketListFragment">
+
+    <fragment
+        android:id="@+id/marketListFragment"
+        android:name="com.ajbell.technicaltest.list.MarketListFragment"
+        android:label="MarketListFragment" >
+        <action
+            android:id="@+id/action_marketListFragment_to_marketDetailFragment"
+            app:destination="@id/marketDetailScreen" />
+    </fragment>
+
+    <composable
+        android:id="@+id/marketDetailScreen"
+        android:name="com.ajbell.technicaltest.detail.MarketDetailsScreenKt\$MarketDetailScreen"
+        android:label="Detail Screen" />
+</navigation>
