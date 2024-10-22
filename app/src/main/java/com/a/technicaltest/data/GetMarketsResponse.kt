@@ -1,4 +1,4 @@
-package com.ajbell.technicaltest.data
+package com.a.technicaltest.data
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

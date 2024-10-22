@@ -1,4 +1,4 @@
-package com.ajbell.technicaltest.util
+package com.a.technicaltest.util
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.LifecycleOwner

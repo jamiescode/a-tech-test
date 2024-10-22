@@ -1,7 +1,6 @@
-package com.ajbell.technicaltest.data
+package com.a.technicaltest.data
 
-import com.ajbell.technicaltest.InterviewApplication
-import com.ajbell.technicaltest.MainActivity
+import com.a.technicaltest.InterviewApplication
 import com.google.gson.GsonBuilder
 
 internal class MarketRepository {

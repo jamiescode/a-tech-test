@@ -1,10 +1,10 @@
-package com.ajbell.technicaltest.list
+package com.a.technicaltest.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ajbell.technicaltest.data.GetMarketsResponse
-import com.ajbell.technicaltest.databinding.ItemMarketBinding
+import com.a.technicaltest.data.GetMarketsResponse
+import com.a.technicaltest.databinding.ItemMarketBinding
 
 internal class MarketListRecyclerViewAdapter(
     private val onItemClick: (GetMarketsResponse.Market) -> Unit

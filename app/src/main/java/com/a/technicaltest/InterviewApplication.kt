@@ -1,4 +1,4 @@
-package com.ajbell.technicaltest
+package com.a.technicaltest
 
 import android.app.Application
 import android.content.Context

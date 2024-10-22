@@ -1,12 +1,12 @@
-package com.ajbell.technicaltest.list
+package com.a.technicaltest.list
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ajbell.technicaltest.data.GetMarketsResponse
-import com.ajbell.technicaltest.data.MarketRepository
-import com.ajbell.technicaltest.util.LiveEvent
+import com.a.technicaltest.data.GetMarketsResponse
+import com.a.technicaltest.data.MarketRepository
+import com.a.technicaltest.util.LiveEvent
 import kotlinx.coroutines.launch
 
 internal class MarketListViewModel : ViewModel() {

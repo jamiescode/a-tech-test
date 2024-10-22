@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ajbell.technicaltest"
+    namespace = "com.a.technicaltest"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ajbell.technicaltest"
+        applicationId = "com.a.technicaltest"
         minSdk = 29
         targetSdk = 34
         versionCode = 1
