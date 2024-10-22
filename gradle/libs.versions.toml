@@ -24,6 +24,8 @@ lifecycleRuntimeKtx = "2.6.1"
 uiGraphicsAndroid = "1.7.4"
 navigationCompose = "2.8.3"
 composeMaterial = "1.4.0"
+kotlinter = "4.4.1"
+detekt = "1.23.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -65,4 +67,5 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+kotlinter = { id = "org.jmailen.kotlinter", version.ref = "kotlinter" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
