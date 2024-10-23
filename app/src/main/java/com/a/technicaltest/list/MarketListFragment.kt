@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
-import com.a.technicaltest.R
 import com.a.technicaltest.databinding.FragmentMarketListBinding
 import com.a.technicaltest.list.MarketListEvent.ShowMarketDetail
 
