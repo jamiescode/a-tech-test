@@ -61,6 +61,7 @@ mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockk" }
 assertk = { module = "com.willowtreeapps.assertk:assertk-jvm", version.ref = "assertk" }
 androidx-ui-graphics-android = { group = "androidx.compose.ui", name = "ui-graphics-android", version.ref = "uiGraphicsAndroid" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+androidx-navigation-fragment-compose = { group = "androidx.navigation", name = "navigation-fragment-compose", version.ref = "navigationCompose" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -68,3 +69,31 @@ jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "k
 kotlinter = { id = "org.jmailen.kotlinter", version.ref = "kotlinter" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+safe-args = { id = "androidx.navigation.safeargs" }
+kotlin-kapt = { id = "kotlin-kapt" }
+kotlin-parcelize = { id = "kotlin-parcelize" }
+
+[bundles]
+compose = [
+    "androidx-ui", "androidx-ui-graphics", "androidx-ui-tooling-preview", "androidx-activity-compose",
+    "androidx-navigation-fragment-compose", "androidx-material3", "androidx-ui-graphics-android",
+    "androidx-navigation-compose",
+]
+coroutines = [
+    "coroutines-core", "coroutines-android"
+]
+test = [
+    "coroutines-test", "junit", "core-testing", "mockk", "mockk-android", "assertk",
+]
+uitest = [
+    "core-testing", "androidx-junit", "androidx-espresso-core",
+]
+lifecycle = [
+    "lifecycle-livedata-ktx", "androidx-lifecycle-runtime-ktx",
+]
+core = [
+    "androidx-core-ktx", "androidx-appcompat", "material", "activity-ktx", "fragment-ktx",
+]
+nav = [
+    "nav-fragment-ktx", "nav-ui-ktx",
+]
