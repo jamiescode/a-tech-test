@@ -7,6 +7,12 @@ plugins {
     alias(libs.plugins.kotlinter)
 }
 
+buildscript {
+    dependencies {
+        classpath(libs.navigation.safe.args.plugin)
+    }
+}
+
 allprojects {
     tasks.withType<Test> { applyTestConfig() }
     apply(plugin = "io.gitlab.arturbosch.detekt")

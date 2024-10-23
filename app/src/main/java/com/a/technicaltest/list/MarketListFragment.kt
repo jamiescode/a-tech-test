@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.a.technicaltest.R
 import com.a.technicaltest.databinding.FragmentMarketListBinding
 import com.a.technicaltest.list.MarketListEvent.ShowMarketDetail
 
@@ -40,9 +39,9 @@ internal class MarketListFragment : Fragment() {
         }
     }
 
-    @Suppress("UnusedParameter")
     private fun showMarketDetail(event: ShowMarketDetail) {
-        findNavController().navigate(R.id.action_marketListFragment_to_marketDetailFragment)
+        val action = MarketListFragmentDirections.actionMarketListFragmentToMarketDetailFragment(event.market)
+        findNavController().navigate(action)
     }
 
     override fun onStart() {
