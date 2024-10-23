@@ -18,6 +18,6 @@
         android:label="Detail Screen">
         <argument
             android:name="Market"
-            app:argType="com.a.technicaltest.data.MarketDto" />
+            app:argType="com.a.technicaltest.data.Market" />
     </fragment>
 </navigation>
