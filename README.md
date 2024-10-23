@@ -28,8 +28,45 @@
 
 # Actions taken
 
-Project setup (before addressing tasks):
+## Project setup (before addressing tasks):
 
-* I first renamed the package name to something less obvious for a public repository
-* I set up GitHub workflows and set up code quality tools. I did this because I want to start from a base of good quality code, with the CI checking everything going forward.
-* I set up Renovate (created PR for dependency updates) and code quality/status badges for the repo. This creates visibility of the health of the project.
+* Renamed the package name to something less obvious for a public repository
+* Set up GitHub workflows and code quality tools. I want to start from a code base with good quality code and a CI checking quality on every PR
+* Configured repo settings to add branch protection - everything must go through a PR that passes the status checks
+* I set up Renovate (GitHub app that creates PRs for dependency updates)
+* Added code quality/status badges to the readme. This creates visibility of the health of the project.
+
+## Task 1
+
+* I assumed that we want to stay with the XML nav graph (the other option to to move completely to Compose nav graphs)
+* As we are using XML nav graphs, we should use the Safe Args plugin as per [the documentation](https://developer.android.com/guide/navigation/use-graph/pass-data#Safe-args) 
+* Changed `<composable>` to a `<fragment>` that becomes a wrapper for a `ComposableView`. The Fragment is a shell for a composable. It's this or we switch everything to Compose nav graphs.
+* Extracted `Market` class from a nested class inside `GetMarketsResponse` to address `ClassNotFoundException: Didn't find GetMarketsResponse.Market on path: DexPathList` 
+
+## Task 2
+
+* TODO
+
+## Task 3
+
+* I'm going to assume that the `fragment_market_detail.xml` layout was the old XML layout that we want to match in Compose.
+
+## Task 4
+
+* TODO
+
+## Task 5
+
+* TODO
+
+## Task 6
+
+* TODO
+
+## Task 7
+
+* TODO
+
+## Task 8
+
+* TODO
