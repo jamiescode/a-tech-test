@@ -83,7 +83,7 @@ dependencies {
     implementation("androidx.compose.ui:ui:1.6.0")
     implementation("androidx.compose.ui:ui-graphics:1.6.0")
     implementation("androidx.compose.ui:ui-tooling-preview:1.6.0")
-    implementation ("androidx.navigation:navigation-fragment-compose:2.8.2")
+    implementation ("androidx.navigation:navigation-fragment-compose:2.8.3")
     implementation(libs.androidx.material3)
     implementation(libs.androidx.ui.graphics.android)
 
