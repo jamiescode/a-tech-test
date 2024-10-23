@@ -1,0 +1,6 @@
+naming:
+  active: true
+  FunctionNaming:
+    active: true
+    # Compose names should be able to start with a upper case letter instead of lower case
+    ignoreAnnotated: [ 'Composable' ]

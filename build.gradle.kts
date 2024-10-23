@@ -9,6 +9,11 @@ plugins {
 
 allprojects {
     tasks.withType<Test> { applyTestConfig() }
+    apply(plugin = "io.gitlab.arturbosch.detekt")
+    detekt {
+        buildUponDefaultConfig = true
+        config.setFrom("$rootDir/detekt.yml")
+    }
 }
 
 fun Test.applyTestConfig() {
