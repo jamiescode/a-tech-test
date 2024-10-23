@@ -1,4 +1,4 @@
-package com.ajbell.technicaltest.data
+package com.a.technicaltest.data
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 
 data class GetMarketsResponse(
     @SerializedName("data")
-    val data: List<Market>
+    val data: List<Market>,
 ) {
     @Parcelize
     data class Market(
@@ -19,6 +19,6 @@ data class GetMarketsResponse(
         @SerializedName("CurrentChange")
         val currentChange: Double,
         @SerializedName("CurrentChangePct")
-        val currentChangePercentage: Double
+        val currentChangePercentage: Double,
     ) : Parcelable
 }

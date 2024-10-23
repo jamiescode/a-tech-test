@@ -1,16 +1,19 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.kotlin.compose)
     id("kotlin-kapt")
     id("kotlin-parcelize")
+    alias(libs.plugins.kotlinter)
+    alias(libs.plugins.detekt)
 }
 
 android {
-    namespace = "com.ajbell.technicaltest"
+    namespace = "com.a.technicaltest"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ajbell.technicaltest"
+        applicationId = "com.a.technicaltest"
         minSdk = 29
         targetSdk = 34
         versionCode = 1

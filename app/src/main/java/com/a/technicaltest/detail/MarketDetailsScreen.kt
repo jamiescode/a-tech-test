@@ -1,17 +1,15 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.ajbell.technicaltest.detail
+package com.a.technicaltest.detail
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -20,11 +18,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalView
-import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import com.ajbell.technicaltest.R
-import com.ajbell.technicaltest.data.GetMarketsResponse
 
 @Composable
 internal fun MarketDetailScreen() {
@@ -35,12 +30,13 @@ internal fun MarketDetailScreen() {
         },
         content = {
             Box(modifier = Modifier.padding(it))
-        }
+        },
     )
 }
 
+@Suppress("MagicNumber")
 @Composable
-private fun AppBar(navController:NavController) {
+private fun AppBar(navController: NavController) {
     TopAppBar(
         title = { Text(text = "Details", color = Color.White) },
         navigationIcon = @Composable {
@@ -49,9 +45,10 @@ private fun AppBar(navController:NavController) {
             }
         },
         modifier = Modifier.statusBarsPadding(),
-        colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = Color(0xFF6200EE),
-            navigationIconContentColor = Color.White
-        )
+        colors =
+            TopAppBarDefaults.topAppBarColors(
+                containerColor = Color(0xFF6200EE),
+                navigationIconContentColor = Color.White,
+            ),
     )
 }

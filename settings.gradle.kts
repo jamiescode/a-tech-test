@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ajbell-technical-test"
+rootProject.name = "a-technical-test"
 include(":app")
- 

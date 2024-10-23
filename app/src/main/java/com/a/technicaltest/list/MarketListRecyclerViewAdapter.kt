@@ -1,27 +1,32 @@
-package com.ajbell.technicaltest.list
+package com.a.technicaltest.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ajbell.technicaltest.data.GetMarketsResponse
-import com.ajbell.technicaltest.databinding.ItemMarketBinding
+import com.a.technicaltest.data.GetMarketsResponse
+import com.a.technicaltest.databinding.ItemMarketBinding
 
 internal class MarketListRecyclerViewAdapter(
-    private val onItemClick: (GetMarketsResponse.Market) -> Unit
+    private val onItemClick: (GetMarketsResponse.Market) -> Unit,
 ) : RecyclerView.Adapter<MarketListRecyclerViewAdapter.MarketItemViewHolder>() {
-
     var data: List<GetMarketsResponse.Market> = emptyList()
         set(value) {
             field = value
             notifyDataSetChanged()
         }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MarketItemViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int,
+    ): MarketItemViewHolder {
         val binding = ItemMarketBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MarketItemViewHolder(binding, onItemClick)
     }
 
-    override fun onBindViewHolder(holder: MarketItemViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: MarketItemViewHolder,
+        position: Int,
+    ) {
         data.getOrNull(position)?.let { holder.bind(it) }
     }
 
@@ -29,9 +34,8 @@ internal class MarketListRecyclerViewAdapter(
 
     class MarketItemViewHolder(
         private val binding: ItemMarketBinding,
-        private val onItemClick: (GetMarketsResponse.Market) -> Unit
+        private val onItemClick: (GetMarketsResponse.Market) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
-
         fun bind(item: GetMarketsResponse.Market) {
             binding.name.run {
                 text = item.companyName

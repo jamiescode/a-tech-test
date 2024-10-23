@@ -12,3 +12,9 @@
 6. After completing the first task, what would you choose to do next? In this task we would like to see which would be your next priority and why.
 7. If you had more time what would you improve?
 8. What would you do differently if you were to start from scratch?
+
+# Actions taken
+
+Project setup (before addressing tasks):
+I first renamed the package name to something less obvious for a public repository. Then I set up GitHub workflows and set up code quality tools.
+I did this because I want to start from a base of good quality code, with the CI checking everything going forward.
