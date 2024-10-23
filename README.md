@@ -1,3 +1,16 @@
+# Technical test
+
+[![Build Status](https://github.com/jamiescode/a-tech-test/actions/workflows/build.yml/badge.svg)](https://github.com/jamiescode/a-tech-test/actions/workflows/build.yml)
+[![Codebeat](https://codebeat.co/badges/c5e98b1c-6946-439b-b18d-de78bbf8149e)](https://codebeat.co/projects/github-com-jamiescode-a-tech-test-main)
+[![CodeFactor](https://www.codefactor.io/repository/github/jamiescode/a-tech-test/badge)](https://www.codefactor.io/repository/github/jamiescode/a-tech-test)
+
+[![Kotlin Version](https://img.shields.io/badge/Kotlin-2.0.x-blue.svg)](https://kotlinlang.org)
+[![AGP](https://img.shields.io/badge/AGP-8.x-blue?style=flat)](https://developer.android.com/studio/releases/gradle-plugin)
+[![Gradle](https://img.shields.io/badge/Gradle-8.x-blue?style=flat)](https://gradle.org)
+![Min SDK 29](https://img.shields.io/badge/Min%20SDK-29-839192?logo=android&logoColor=white)
+![Target SDK 35](https://img.shields.io/badge/Target%20SDK-35-566573?logo=android&logoColor=white)
+[![Language: Kotlin](https://img.shields.io/github/languages/top/jamiescode/a-tech-test.svg)](https://github.com/jamiescode/a-tech-test/search?l=kotlin)
+
 # Tasks
 
 1. Update the project to pass the selected market object from the MarketListFragment to the MarketDetailScreen (Compose).
@@ -16,5 +29,7 @@
 # Actions taken
 
 Project setup (before addressing tasks):
-I first renamed the package name to something less obvious for a public repository. Then I set up GitHub workflows and set up code quality tools.
-I did this because I want to start from a base of good quality code, with the CI checking everything going forward.
+
+* I first renamed the package name to something less obvious for a public repository
+* I set up GitHub workflows and set up code quality tools. I did this because I want to start from a base of good quality code, with the CI checking everything going forward.
+* I set up Renovate (created PR for dependency updates) and code quality/status badges for the repo. This creates visibility of the health of the project.
