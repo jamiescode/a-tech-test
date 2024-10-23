@@ -40,7 +40,7 @@
 
 * I assumed that we want to stay with the XML nav graph (the other option to to move completely to Compose nav graphs)
 * As we are using XML nav graphs, we should use the Safe Args plugin as per [the documentation](https://developer.android.com/guide/navigation/use-graph/pass-data#Safe-args) 
-* Changed `<composable>` to a `<fragment>` that becomes a wrapper for a `ComposableView`. The Fragment is a shell for a composable. It's this or we switch everything to Compose nav graphs.
+* Changed `<composable>` to a `<fragment>` that becomes a wrapper for a `ComposableView`. The Fragment is a shell for a composable. It's this or we switch everything to Compose nav graphs. You can see both options [here](https://developer.android.com/guide/navigation/design#frameworks).
 * Extracted `Market` class from a nested class inside `GetMarketsResponse` to address `ClassNotFoundException: Didn't find GetMarketsResponse.Market on path: DexPathList` 
 
 ## Task 2
