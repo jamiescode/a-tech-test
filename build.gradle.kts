@@ -8,10 +8,10 @@ plugins {
 }
 
 allprojects {
-    tasks.withType<Test> { applySharedConfig() }
+    tasks.withType<Test> { applyTestConfig() }
 }
 
-fun Test.applySharedConfig() {
+fun Test.applyTestConfig() {
     useJUnitPlatform()
     testLogging {
         // Logging out the events allows us to spot any hanging tests
@@ -22,6 +22,7 @@ fun Test.applySharedConfig() {
     addTestListener(createTestListener())
 }
 
+@Suppress("detekt.EmptyFunctionBlock")
 fun createTestListener(): TestListener = object: TestListener {
     override fun beforeTest(testDescriptor: TestDescriptor?) {}
     override fun afterTest(testDescriptor: TestDescriptor?, result: TestResult?) {}
