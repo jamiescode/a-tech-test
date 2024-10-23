@@ -30,12 +30,12 @@ internal fun MarketDetailScreen() {
         },
         content = {
             Box(modifier = Modifier.padding(it))
-        }
+        },
     )
 }
 
 @Composable
-private fun AppBar(navController:NavController) {
+private fun AppBar(navController: NavController) {
     TopAppBar(
         title = { Text(text = "Details", color = Color.White) },
         navigationIcon = @Composable {
@@ -44,9 +44,10 @@ private fun AppBar(navController:NavController) {
             }
         },
         modifier = Modifier.statusBarsPadding(),
-        colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = Color(0xFF6200EE),
-            navigationIconContentColor = Color.White
-        )
+        colors =
+            TopAppBarDefaults.topAppBarColors(
+                containerColor = Color(0xFF6200EE),
+                navigationIconContentColor = Color.White,
+            ),
     )
 }

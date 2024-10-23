@@ -10,7 +10,6 @@ import com.a.technicaltest.util.LiveEvent
 import kotlinx.coroutines.launch
 
 internal class MarketListViewModel : ViewModel() {
-
     private val marketRepository = MarketRepository()
 
     private val _markets = MutableLiveData<List<GetMarketsResponse.Market>>()

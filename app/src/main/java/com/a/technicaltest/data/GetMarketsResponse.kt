@@ -6,7 +6,7 @@ import kotlinx.parcelize.Parcelize
 
 data class GetMarketsResponse(
     @SerializedName("data")
-    val data: List<Market>
+    val data: List<Market>,
 ) {
     @Parcelize
     data class Market(
@@ -19,6 +19,6 @@ data class GetMarketsResponse(
         @SerializedName("CurrentChange")
         val currentChange: Double,
         @SerializedName("CurrentChangePct")
-        val currentChangePercentage: Double
+        val currentChangePercentage: Double,
     ) : Parcelable
 }

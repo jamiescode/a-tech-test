@@ -12,19 +12,19 @@ import com.a.technicaltest.databinding.FragmentMarketListBinding
 import com.a.technicaltest.list.MarketListEvent.ShowMarketDetail
 
 internal class MarketListFragment : Fragment() {
-
     private val viewModel by viewModels<MarketListViewModel>()
     private var binding: FragmentMarketListBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View = FragmentMarketListBinding.inflate(inflater, container, false).let {
-        binding = it
-        initBinding()
-        it.root
-    }
+        savedInstanceState: Bundle?,
+    ): View =
+        FragmentMarketListBinding.inflate(inflater, container, false).let {
+            binding = it
+            initBinding()
+            it.root
+        }
 
     private fun initBinding() {
         binding?.recyclerView?.adapter = MarketListRecyclerViewAdapter(viewModel::onItemClick)
@@ -34,7 +34,7 @@ internal class MarketListFragment : Fragment() {
         }
 
         viewModel.event.observe(viewLifecycleOwner) { event ->
-            when(event) {
+            when (event) {
                 is ShowMarketDetail -> showMarketDetail(event)
             }
         }
