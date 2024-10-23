@@ -3,13 +3,13 @@ package com.a.technicaltest.list
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.a.technicaltest.data.GetMarketsResponse
+import com.a.technicaltest.data.Market
 import com.a.technicaltest.databinding.ItemMarketBinding
 
 internal class MarketListRecyclerViewAdapter(
-    private val onItemClick: (GetMarketsResponse.Market) -> Unit,
+    private val onItemClick: (Market) -> Unit,
 ) : RecyclerView.Adapter<MarketListRecyclerViewAdapter.MarketItemViewHolder>() {
-    var data: List<GetMarketsResponse.Market> = emptyList()
+    var data: List<Market> = emptyList()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -34,9 +34,9 @@ internal class MarketListRecyclerViewAdapter(
 
     class MarketItemViewHolder(
         private val binding: ItemMarketBinding,
-        private val onItemClick: (GetMarketsResponse.Market) -> Unit,
+        private val onItemClick: (Market) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: GetMarketsResponse.Market) {
+        fun bind(item: Market) {
             binding.name.run {
                 text = item.companyName
                 setOnClickListener { onItemClick.invoke(item) }

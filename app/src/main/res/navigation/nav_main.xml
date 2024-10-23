@@ -12,8 +12,12 @@
             app:destination="@id/marketDetailScreen" />
     </fragment>
 
-    <composable
+    <fragment
         android:id="@+id/marketDetailScreen"
-        android:name="com.a.technicaltest.detail.MarketDetailsScreenKt\$MarketDetailScreen"
-        android:label="Detail Screen" />
+        android:name="com.a.technicaltest.detail.MarketDetailsFragment"
+        android:label="Detail Screen">
+        <argument
+            android:name="Market"
+            app:argType="com.a.technicaltest.data.Market" />
+    </fragment>
 </navigation>

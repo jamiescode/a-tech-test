@@ -6,6 +6,7 @@ plugins {
     id("kotlin-parcelize")
     alias(libs.plugins.kotlinter)
     alias(libs.plugins.detekt)
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -42,7 +43,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.2"
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
 
     buildFeatures {
