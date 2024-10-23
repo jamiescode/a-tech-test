@@ -40,6 +40,7 @@ internal class MarketListFragment : Fragment() {
         }
     }
 
+    @Suppress("UnusedParameter")
     private fun showMarketDetail(event: ShowMarketDetail) {
         findNavController().navigate(R.id.action_marketListFragment_to_marketDetailFragment)
     }

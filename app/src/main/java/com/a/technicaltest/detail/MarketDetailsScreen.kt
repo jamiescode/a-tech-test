@@ -34,6 +34,7 @@ internal fun MarketDetailScreen() {
     )
 }
 
+@Suppress("MagicNumber")
 @Composable
 private fun AppBar(navController: NavController) {
     TopAppBar(

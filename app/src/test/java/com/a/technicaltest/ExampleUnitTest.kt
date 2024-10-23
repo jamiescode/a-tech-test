@@ -1,6 +1,6 @@
 package com.a.technicaltest
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
