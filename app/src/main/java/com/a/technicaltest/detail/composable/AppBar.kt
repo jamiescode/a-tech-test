@@ -1,7 +1,6 @@
 package com.a.technicaltest.detail.composable
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -15,14 +14,16 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import com.a.technicaltest.R
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Suppress("MagicNumber")
 @Composable
 fun AppBar(onGoBack: () -> Unit) {
     TopAppBar(
-        title = { Text(text = "Details", color = Color.White) },
+        title = { Text(text = stringResource(R.string.market_details_app_bar_title), color = Color.White) },
         navigationIcon = @Composable {
             IconButton(onClick = { onGoBack() }) {
                 Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
@@ -31,7 +32,7 @@ fun AppBar(onGoBack: () -> Unit) {
         modifier = Modifier.statusBarsPadding(),
         colors =
             TopAppBarDefaults.topAppBarColors(
-                containerColor = Color(0xFF6200EE),
+                containerColor = colorResource(R.color.purple_500),
                 navigationIconContentColor = Color.White,
             ),
     )
@@ -41,7 +42,7 @@ fun AppBar(onGoBack: () -> Unit) {
 @Composable
 fun AppBarPreview() {
     MaterialTheme {
-        Box(modifier = Modifier.fillMaxSize()) {
+        Column {
             AppBar {}
         }
     }

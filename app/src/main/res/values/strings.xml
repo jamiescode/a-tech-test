@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">a-technical-test</string>
+    <string name="market_details_title">Market Details</string>
+    <string name="market_details_epic_title">Epic:</string>
+    <string name="market_details_price_title">Price:</string>
+    <string name="market_details_change_title">Change:</string>
+    <string name="market_details_change_percentage_title">Change %:</string>
+    <string name="loading_market_details">Loading market details...</string>
+    <string name="market_details_app_bar_title">Details</string>
 </resources>
