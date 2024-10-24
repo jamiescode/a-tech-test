@@ -1,4 +1,4 @@
-package com.jamiescode.grazer.testutils
+package com.a.technicaltest.testutils
 
 import android.annotation.SuppressLint
 import androidx.arch.core.executor.ArchTaskExecutor

@@ -1,4 +1,4 @@
-package com.jamiescode.grazer.testutils
+package com.a.technicaltest.testutils
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
