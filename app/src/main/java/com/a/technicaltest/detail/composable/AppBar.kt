@@ -14,12 +14,12 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.a.technicaltest.R
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Suppress("MagicNumber")
 @Composable
 fun AppBar(onGoBack: () -> Unit) {
     TopAppBar(
@@ -32,7 +32,7 @@ fun AppBar(onGoBack: () -> Unit) {
         modifier = Modifier.statusBarsPadding(),
         colors =
             TopAppBarDefaults.topAppBarColors(
-                containerColor = Color(0xFF6200EE),
+                containerColor = colorResource(R.color.purple_500),
                 navigationIconContentColor = Color.White,
             ),
     )
