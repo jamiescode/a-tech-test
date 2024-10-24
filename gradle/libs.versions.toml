@@ -65,7 +65,7 @@ androidx-navigation-fragment-compose = { group = "androidx.navigation", name = "
 # Testing
 junit5-bom = { module = "org.junit:junit-bom", version = "5.11.3" }
 junit5 = { module = "org.junit.jupiter:junit-jupiter" }
-junit4 = { module = "junit:junit", version = "junit4" }
+junit4 = { module = "junit:junit", version.ref = "junit4" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidXJUnit" }
 androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidx-test" }
 mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
