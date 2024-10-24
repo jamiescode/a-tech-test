@@ -30,7 +30,7 @@ kluent = "1.73"
 mockito = "5.14.1"
 core-testing = "2.2.0"
 navigation-test = "2.8.2"
-junitJupiterEngine = "5.11.2"
+junitJupiterEngine = "5.11.3"
 turbine = "1.2.0"
 
 [libraries]
@@ -64,7 +64,7 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 androidx-navigation-fragment-compose = { group = "androidx.navigation", name = "navigation-fragment-compose", version.ref = "navigationCompose" }
 
 # Testing
-junit5-bom = { module = "org.junit:junit-bom", version = "5.11.2" }
+junit5-bom = { module = "org.junit:junit-bom", version = "5.11.3" }
 junit5 = { module = "org.junit.jupiter:junit-jupiter" }
 junit4 = { module = "junit:junit", version = "junit4" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidXJUnit" }
