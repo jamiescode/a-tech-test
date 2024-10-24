@@ -11,7 +11,7 @@ internal class MarketDetailViewModel : ViewModel() {
     private val _stateLiveData: MutableLiveData<State> by lazy {
         MutableLiveData<State>(State.Loading)
     }
-    val stateLiveData = _stateLiveData as LiveData<State>
+    val uiState = _stateLiveData as LiveData<State>
 
     fun setMarket(market: Market) {
         viewModelScope.launch {

@@ -34,7 +34,7 @@ class MarketDetailViewModelTest {
             // WHEN no action taken
 
             // THEN state should be loading
-            viewModel.stateLiveData.asFlow().test {
+            viewModel.uiState.asFlow().test {
                 awaitItem() shouldBeInstanceOf MarketDetailViewModel.State.Loading::class
             }
         }
@@ -42,7 +42,7 @@ class MarketDetailViewModelTest {
     @Test
     fun `GIVEN no market data, WHEN market set, THEN state should change from loading to loaded with the market`() =
         runTest {
-            viewModel.stateLiveData.asFlow().test {
+            viewModel.uiState.asFlow().test {
                 // GIVEN no market data
 
                 // WHEN market set
