@@ -11,6 +11,12 @@
 ![Target SDK 35](https://img.shields.io/badge/Target%20SDK-35-566573?logo=android&logoColor=white)
 [![Language: Kotlin](https://img.shields.io/github/languages/top/jamiescode/a-tech-test.svg)](https://github.com/jamiescode/a-tech-test/search?l=kotlin)
 
+# Screenshots
+
+| List | Detail (Loading) | Detail (Loaded) |
+| --- | --- | ---|
+| ![List](.screenshots/list.webp) | ![Detail (Loading)](.screenshots/detail-loading.webp) | ![Detail](.screenshots/detail-loaded.webp) |
+
 # Tasks
 
 1. Update the project to pass the selected market object from the MarketListFragment to the MarketDetailScreen (Compose).
