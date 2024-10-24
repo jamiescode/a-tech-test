@@ -8,14 +8,14 @@ import com.a.technicaltest.data.Market
 import kotlinx.coroutines.launch
 
 internal class MarketDetailViewModel : ViewModel() {
-    private val _stateLiveData: MutableLiveData<State> by lazy {
+    private val _uiState: MutableLiveData<State> by lazy {
         MutableLiveData<State>(State.Loading)
     }
-    val uiState = _stateLiveData as LiveData<State>
+    val uiState = _uiState as LiveData<State>
 
     fun setMarket(market: Market) {
         viewModelScope.launch {
-            _stateLiveData.value = State.Loaded(market)
+            _uiState.value = State.Loaded(market)
         }
     }
 
