@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlinter)
     alias(libs.plugins.detekt)
@@ -49,6 +49,12 @@ android {
         dataBinding = true
         compose = true
     }
+
+    packaging {
+        resources {
+            excludes += "META-INF/**"
+        }
+    }
 }
 
 dependencies {
@@ -61,6 +67,8 @@ dependencies {
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.compose)
 
+    testImplementation(project(":testutils"))
+    testImplementation(platform(libs.junit5.bom))
     testImplementation(libs.bundles.test)
     androidTestImplementation(libs.bundles.uitest)
 }
