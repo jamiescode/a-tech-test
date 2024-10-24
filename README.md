@@ -39,12 +39,12 @@
 * Renamed the package name to something less obvious for a public repository
 * Set up GitHub workflows and code quality tools. I want to start from a code base with good quality code and a CI checking quality on every PR
 * Configured repo settings to add branch protection - everything must go through a PR that passes the status checks
-* I set up Renovate (GitHub app that creates PRs for dependency updates)
+* I set up [Renovate](https://docs.renovatebot.com/) (GitHub app that creates PRs for dependency updates)
 * Added code quality/status badges to the readme. This creates visibility of the health of the project.
 
 ## Task 1 - Pass the selected market object
 
-* I assumed that we want to stay with the XML nav graph (the other option to to move completely to Compose nav graphs)
+* I assumed that we want to stay with the XML nav graph (the other option is to move completely to Compose nav graphs)
 * As we are using XML nav graphs, we should use the Safe Args plugin as per [the documentation](https://developer.android.com/guide/navigation/use-graph/pass-data#Safe-args) 
 * Changed `<composable>` to a `<fragment>` that becomes a wrapper for a `ComposableView`. The Fragment is a shell for a composable. It's this or we switch everything to Compose nav graphs. You can see both options [here](https://developer.android.com/guide/navigation/design#frameworks).
 * Extracted `Market` class from a nested class inside `GetMarketsResponse` to address `ClassNotFoundException: Didn't find GetMarketsResponse.Market on path: DexPathList` 
@@ -55,12 +55,12 @@
 * The composable listens to the `LiveData` state of the screen. I've set these to be `Loading` and `Loaded`, where `Loaded` contains the market data.
 * I wrote view model tests as part of this task, so I've already done number 5.
 * I added the [Turbine library](https://github.com/cashapp/turbine) in order to easily test the view states being sent by the `ViewModel`
-* I needed to include some extensions in order to unit test the `ViewModel`. I added another module called `testutils` which includes the files for tests and included the module as a test dependency for the `app` module.
+* I needed to include some extensions in order to unit test the `ViewModel`. I added another module called `testutils` which includes the files for tests and is a test dependency for the `app` module.
 
 ## Task 3 - Populate fields
 
-* I have implemented Epic, Current Price, Current Change & Current Change Percentage in the MarketDetailScreen
-* I used the Text Composable, along with the material design tokens for text styling. This means that the style can be easily changed in the future
+* I have implemented `Epic`, `Current Price`, `Current Change` & `Current Change Percentage` in the `MarketDetailScreen`
+* I used the `Text` Composable, along with the material design tokens for text styling. This means that the style can be easily changed in the future
 * Added `MarketDetailsRow` which is a composable to represent a title and value in a row. This is used for each attribute.
 * Extracted strings to `strings.xml`, ready for localisation
 * I've used values from `Market` directly in the view here. There is an argument that I should have had a domain object to represent `Market` and a mapper to format the text. For something this small, I don't see the need.
@@ -96,7 +96,6 @@
 * Write UI tests. Investigate screenshot testing using [Shot](https://github.com/pedrovgs/Shot) or something similar.
 * Set up a code coverage tool that can report on each PR. Also add a code coverage percentage badge to the project readme.
 * Set up DI using [Hilt](https://developer.android.com/training/dependency-injection/hilt-android)
-* ~Change `containerColor` in `AppBar` to not be hardcoded. It should us a predefined colour, ideally from the MaterialTheme with a token. Once this is changed I can remove `@Suppress(MagicNumber)` as well.~ Replaced with `purple_500`
 
 ## Task 8 - What would you do differently from scratch?
 
