@@ -74,3 +74,22 @@
 ## Task 8
 
 * TODO
+
+
+## Things to improve
+
+* Change `containerColor` in `AppBar` to not be hardcoded. It should us a predefined colour, ideally from the MaterialTheme with a token. Once this is changed I can remove `@Suppress(MagicNumber)` as well.
+* Convert `GetMarketsResponse` into a fully fledged API request and response, ideally using Retrofit
+* Look into the issue that when you switch between fragments, the AppBar is of different heights
+* Consider switching the entire navigation to compose navigation. For a small project like this, it's ok. For a large project you would need to keep using fragment wrappers until the majority of the UI is in compose.
+* Write unit tests. Especially for `MarketListViewModel`
+* Consider adding Timber / Analytics / Crash reporting
+* Don't expose the `Context` in `InterviewApplication`
+* Change `LiveEvent` code formatting to match the result of the code. It's currently the AOSP standard e.g. `mData` instead of `data`.
+* Tidy up `libs.versions.toml` dependency list. I've already organised some of it and updated all the versions, but there are still libraries that aren't used.
+* Investigate theming - it's likely that the XML theme is not going to match the theme used in the compose screens.
+* Set an app icon
+* Consider if we need the high min SDK version of 29. According to [API Levels](https://apilevels.com/), this would target 87.1% as of the time of writing this. A min API of 26 hitting 95.7% of the market might be more appropriate. I suggest API 26 because at this level you need a lot less variations of the app icon - most of it is provided by XML files instead of images.
+* Write UI tests. Investigate screenshot testing using [Shot](https://github.com/pedrovgs/Shot) or something similar.
+* Set up a code coverage tool that can report on each PR. Also add a code coverage percentage badge to the project readme.
+* Set up DI using [Hilt](https://developer.android.com/training/dependency-injection/hilt-android)
