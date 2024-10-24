@@ -66,6 +66,8 @@ dependencies {
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.compose)
+    debugImplementation(libs.bundles.composeDebug)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
 
     testImplementation(project(":testutils"))
     testImplementation(platform(libs.junit5.bom))
