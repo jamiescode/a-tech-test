@@ -45,7 +45,11 @@
 
 ## Task 2
 
-* TODO
+* I added `MarketDetailsViewModel`, which only has a single method `setMarket()`. I chose to use `LiveData` to represent the view state. The fragment gets the navigation argument and calls `setMarket` on the view model.
+* The composable listens to the `LiveData` state of the screen. I've set these to be `Loading` and `Loaded`, where `Loaded` contains the market data.
+* I wrote view model tests as part of this task, so I've already done number 5.
+* I added the [Turbine library](https://github.com/cashapp/turbine) in order to easily test the view states being sent by the `ViewModel`
+* I needed to include some extensions in order to unit test the `ViewModel`. I added another module called `testutils` which includes the files for tests and included the module as a test dependency for the `app` module.
 
 ## Task 3
 
@@ -57,7 +61,7 @@
 
 ## Task 5
 
-* TODO
+* Completed as part of task 2 - I consider writing units tests as part of adding the `ViewModel`
 
 ## Task 6
 
