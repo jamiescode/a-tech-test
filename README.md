@@ -53,7 +53,11 @@
 
 ## Task 3
 
-* I'm going to assume that the `fragment_market_detail.xml` layout was the old XML layout that we want to match in Compose.
+* I have implemented Epic, Current Price, Current Change & Current Change Percentage in the MarketDetailScreen
+* I used the Text Composable, along with the material design tokens for text styling. This means that the style can be easily changed in the future
+* Added `MarketDetailsRow` which is a composable to represent a title and value in a row. This is used for each attribute.
+* Extracted strings to `strings.xml`, ready for localisation
+* I've used values from `Market` directly in the view here. There is an argument that I should have had a domain object to represent `Market` and a mapper to format the text. For something this small, I don't see the need.
 
 ## Task 4
 
@@ -78,7 +82,6 @@
 
 ## Things to improve
 
-* Change `containerColor` in `AppBar` to not be hardcoded. It should us a predefined colour, ideally from the MaterialTheme with a token. Once this is changed I can remove `@Suppress(MagicNumber)` as well.
 * Convert `GetMarketsResponse` into a fully fledged API request and response, ideally using Retrofit
 * Look into the issue that when you switch between fragments, the AppBar is of different heights
 * Consider switching the entire navigation to compose navigation. For a small project like this, it's ok. For a large project you would need to keep using fragment wrappers until the majority of the UI is in compose.
@@ -93,3 +96,4 @@
 * Write UI tests. Investigate screenshot testing using [Shot](https://github.com/pedrovgs/Shot) or something similar.
 * Set up a code coverage tool that can report on each PR. Also add a code coverage percentage badge to the project readme.
 * Set up DI using [Hilt](https://developer.android.com/training/dependency-injection/hilt-android)
+* ~Change `containerColor` in `AppBar` to not be hardcoded. It should us a predefined colour, ideally from the MaterialTheme with a token. Once this is changed I can remove `@Suppress(MagicNumber)` as well.~ Replaced with `purple_500`
