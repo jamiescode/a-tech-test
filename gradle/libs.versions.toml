@@ -1,9 +1,7 @@
 [versions]
 agp = "8.7.1"
-coreKtxVersion = "1.13.1"
 kotlin = "2.0.21"
 coreKtx = "1.13.1"
-junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
 material = "1.12.0"
@@ -12,10 +10,7 @@ activity = "1.9.3"
 fragment = "1.8.4"
 nav = "2.8.3"
 lifecycle = "2.8.6"
-core-testing = "2.2.0"
 gson = "2.11.0"
-junit = "4.13.2"
-mockk = "1.13.13"
 assertk = "0.28.1"
 composeBom = "2024.10.00"
 activityCompose = "1.9.3"
@@ -26,16 +21,26 @@ kotlinter = "4.4.1"
 detekt = "1.23.7"
 navigation-safe-args = "2.8.3"
 
+# Testing
+junit4 = "4.13.2"
+androidXJUnit = "1.2.1"
+androidx-test = "1.6.2"
+mockk = "1.13.13"
+kluent = "1.73"
+mockito = "5.14.1"
+core-testing = "2.2.0"
+navigation-test = "2.8.2"
+junitJupiterEngine = "5.11.2"
+turbine = "1.2.0"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 navigation-safe-args-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigation-safe-args" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
 coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlin-coroutines" }
-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlin-coroutines" }
 
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -53,25 +58,37 @@ fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx",version.ref 
 nav-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "nav" }
 nav-ui-ktx = { group = "androidx.navigation",name = "navigation-ui-ktx", version.ref = "nav" }
 lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycle" }
-core-testing = { group = "androidx.arch.core", name = "core-testing", version.ref = "core-testing" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
-junit = { module = "junit:junit", version.ref = "junit" }
-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
-mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockk" }
-assertk = { module = "com.willowtreeapps.assertk:assertk-jvm", version.ref = "assertk" }
 androidx-ui-graphics-android = { group = "androidx.compose.ui", name = "ui-graphics-android", version.ref = "uiGraphicsAndroid" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 androidx-navigation-fragment-compose = { group = "androidx.navigation", name = "navigation-fragment-compose", version.ref = "navigationCompose" }
 
+# Testing
+junit5-bom = { module = "org.junit:junit-bom", version = "5.11.2" }
+junit5 = { module = "org.junit.jupiter:junit-jupiter" }
+junit4 = { module = "junit:junit", version = "junit4" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidXJUnit" }
+androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidx-test" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockk" }
+kluent = { module = "org.amshove.kluent:kluent-android", version.ref = "kluent" }
+mockito = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+test-coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlin-coroutines" }
+core-testing = { module = "androidx.arch.core:core-testing", version.ref = "core-testing" }
+junitJupiterEngine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junitJupiterEngine" }
+assertk = { module = "com.willowtreeapps.assertk:assertk-jvm", version.ref = "assertk" }
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+
 [plugins]
-androidApplication = { id = "com.android.application", version.ref = "agp" }
-jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinter = { id = "org.jmailen.kotlinter", version.ref = "kotlinter" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 safe-args = { id = "androidx.navigation.safeargs" }
 kotlin-kapt = { id = "kotlin-kapt" }
 kotlin-parcelize = { id = "kotlin-parcelize" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 
 [bundles]
 compose = [
@@ -83,7 +100,8 @@ coroutines = [
     "coroutines-core", "coroutines-android"
 ]
 test = [
-    "coroutines-test", "junit", "core-testing", "mockk", "mockk-android", "assertk",
+    "junit5", "junit4", "androidx-junit", "androidx-test-runner", "mockk", "mockk-android",
+    "kluent", "mockito", "test-coroutines", "core-testing", "assertk", "turbine",
 ]
 uitest = [
     "core-testing", "androidx-junit", "androidx-espresso-core",
